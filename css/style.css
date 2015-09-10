@@ -1,0 +1,446 @@
+@charset "utf-8";
+body {
+    background: #eee
+}
+
+#fixedBox {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding-top: 45px;
+    z-index: 10000!important;
+    background: #45535c
+}
+
+a:hover {
+    text-decoration: underline
+}
+
+#container {
+    background: #000!important
+}
+
+.contentsouter {
+    background: url(../imgs/bg.jpg) repeat top left #000!important;
+    padding-bottom: 80px
+}
+
+.contents {
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative
+}
+
+.main {
+    position: relative;
+    background: url(../imgs/main_bg.png) no-repeat center top;
+    height: 766px
+}
+
+.main h4 {
+    position: absolute;
+    top: 10%;
+    left: 0;
+    right: 0;
+    width: 447px;
+    margin: 0 auto
+}
+
+.contentsinr {
+    position: relative;
+    z-index: 999;
+    margin-bottom: 30px
+}
+
+h4.mds {
+    padding-top: 100px;
+    margin-top: -100px
+}
+
+h4.mds span {
+    display: block;
+    text-align: center;
+    color: #222;
+    font-size: 32px;
+    height: 55px;
+    line-height: 55px;
+    letter-spacing: 25px;
+    background: url(../imgs/mds_bg.jpg) repeat-y center #000!important;
+    margin-bottom: 10px
+}
+
+.moviepic {
+    display: block;
+    float: left
+}
+
+.moviepic02 {
+    display: block;
+    float: right
+}
+
+div.technology {
+    background: -webkit-linear-gradient(#5d7bba, #183975);
+    background: linear-gradient(#5d7bba, #183975);
+    text-align: center;
+    padding: 20px 0 40px 0;
+    margin-bottom: 40px
+}
+
+.technology h6 {
+    margin-bottom: 20px
+}
+
+.tech01_tbl {
+    width: 760px;
+    margin: 0 auto 60px
+}
+
+.tech01_foot {
+    display: table-cell;
+    width: 380px
+}
+
+p.tech02txt {
+    color: #FFF;
+    margin: 10px auto 0
+}
+
+.tech02pic {
+    display: block;
+    margin: 30px auto 0
+}
+
+.tech_01_bottom{text-align:center;}
+.tech_01_bottom img{display:block;}
+ul.foottxt{
+	text-align:left;
+	display: block;
+	color:#FFF;
+	font-size:70%;
+	width: 677px;
+	margin:10px auto 20px;
+}
+ul.foottxt li{
+	text-indent: -1em;
+	padding-left: 1em;
+	font-size: 14px;
+}
+
+div.prod {
+    margin-top: 10px;
+    padding-top: 30px;
+    padding-right: 30px;
+    background: #FFF;
+    padding-bottom: 30px
+}
+
+.prodimg {
+    display: block;
+    float: left;
+    width: 600px
+}
+
+.data {
+    float: right;
+    width: 100%;
+    margin-left: -600px;
+    padding-top: 10px;
+    color: #333
+}
+
+.datainr {
+    margin-left: 600px;
+    padding-right: 0
+}
+
+.data .iconarea span.uni {
+    border: 2px solid #222;
+    border-radius: 6px;
+    padding: 0 10px;
+    margin-right: 10px
+}
+
+.data .iconarea02 {
+    margin-bottom: 5px
+}
+
+.data .iconarea02 span.kana {
+    border: 1px solid #FFF;
+    border-radius: 4px;
+    padding: 5px 10px;
+    font-size: 14px;
+    margin-right: 10px
+}
+
+.data .iconarea span.shuttle img {
+    vertical-align: baseline
+}
+
+.data .iconarea02 span.shuttle img {
+    vertical-align: middle;
+    margin-bottom: 3px
+}
+
+.data .prodNameen {
+    padding-top: 10px;
+    margin-bottom: -5px
+}
+
+.data .prodNameen .name {
+    font-size: 20px;
+    line-height: 100%
+}
+
+.data .prodNameKana {
+    padding-top: 10px
+}
+
+.data .prodNameKana .name {
+    font-size: 20px;
+    line-height: 100%
+}
+
+.data .prodNameKana .kataban {
+    display: block;
+    text-align: right;
+    margin-top: -1em;
+    line-height: 100%
+}
+
+.data .prodPrice {
+    line-height: 100%;
+    padding-top: 10px;
+    font-size: 26px
+}
+
+.data .prodPrice .text {
+    font-size: 18px
+}
+
+.new {
+    line-height: 100%;
+    margin-bottom: 7px
+}
+
+.new span {
+    background: #c30c09;
+    color: #FFF;
+    padding: 4px 8px;
+    line-height: 24px
+}
+
+.prodPrice span.tax {
+    font-size: 15px;
+    margin-left: 5px
+}
+
+.data .prodPrice span.limited {
+    color: #FFF;
+    font-size: 14px;
+    line-height: 100%;
+    background: #c30c09;
+    padding: 3px 5px;
+    margin-left: 10px;
+    border-radius: 4px
+}
+
+.data .prodPrice .seisan {
+    display: block;
+    text-align: right;
+    margin-top: -1em;
+    line-height: 100%;
+    font-size: 15px
+}
+
+.data .dataTbl {
+    font-size: 13px;
+    width: 100%;
+    border-top: 4px solid #FFF;
+    margin-top: 10px
+}
+
+.data .dataTbl th {
+    border-right: 4px solid #FFF;
+    border-bottom: 4px solid #FFF;
+    background: #DDD;
+    padding: 6px 9px;
+    width: 25%
+}
+
+.data .dataTbl td {
+    border-bottom: 4px solid #FFF;
+    background: #EEE;
+    padding: 6px 9px;
+    line-height: 200%
+}
+
+.data .footicon {
+    margin-top: 10px
+}
+
+.data .footicon img {
+    margin-right: 10px
+}
+
+.data .footdata {
+    background: #222;
+    margin-top: 10px;
+    padding: 10px
+}
+
+.data .footdata p {
+    font-size: 13px;
+    margin-top: 10px
+}
+
+.data p.foottxt {
+    font-size: 13px;
+    margin-top: 15px
+}
+
+.data p.foottxt img {
+    vertical-align: middle;
+    margin-right: 5px
+}
+
+@media screen and (max-width:1400px) {
+    h2 span {
+        padding-left: 50px
+    }
+    .pnkz {
+        padding: 0 0 0 50px
+    }
+    .contents {
+        padding: 0 50px
+    }
+    .moviepic {
+        width: 49%
+    }
+    .moviepic02 {
+        width: 49%
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .prod {
+        margin-top: 30px
+    }
+    .prodimg {
+        width: 550px
+    }
+    .data {
+        margin-left: -550px;
+        padding-top: 0
+    }
+    .datainr {
+        margin-left: 550px
+    }
+}
+
+@media screen and (max-width:1050px) {
+    .tech01main {
+        width: 95%;
+        display: block;
+        margin: 0 auto
+    }
+    .tech01_tbl {
+        width: 75%;
+        margin: 0 auto 60px
+    }
+    .tech01_foot {
+        width: 50%
+    }
+    .tech01_foot img {
+        width: 100%
+    }
+}
+
+@media screen and (max-width:1030px) {
+    h2 span {
+        padding-left: 20px
+    }
+    .pnkz {
+        padding: 0 0 0 20px
+    }
+    .contents {
+        padding: 0 20px
+    }
+}
+
+.fbfoot {
+    background: #000;
+    height: 10px;
+    width: 100%
+}
+
+@media only screen and (max-width:470px) and (min-width:300px) {
+
+	.contentsouter .contents{
+		position: relative;
+		top:48px;
+	}
+
+    .img-responsive {
+        display: block;
+        max-width: 100%;
+        height: auto
+    }
+    .main {
+        height: 350px;
+        background-size: 100% 100%
+    }
+    .main h4 {
+        top: 14%;
+        width: 80%;
+        left:0;
+        right:0;
+    }
+    h4.mds span {
+        letter-spacing: 0
+    }
+    .contentsinr {
+        margin-bottom: .5em
+    }
+    .contentsinr .video {
+        display: block;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        margin: .5em 0
+    }
+    .contentsinr .video .moviepic,
+    .contentsinr .video .moviepic02 {
+        width: 100%
+    }
+    .technology {
+        margin-bottom: .5em!important;
+        padding: 20px 10px 40px 10px !important;
+    }
+    .prod {
+        padding-right: 0!important;
+        width: 100%
+    }
+    .prod .prodimg {
+        width: 100%;
+        display: block
+    }
+    .prod .data {
+        width: 100%;
+        margin-left: 0!important;
+        margin-top: 1em
+    }
+    .prod .data .datainr {
+        padding: 0 20px;
+        margin-left: 0!important
+    }
+
+    ul.foottxt{
+	text-align:left;
+	display: block;
+	color:#FFF;
+	font-size:70%;
+	width: 100%;
+	margin:10px auto 20px;
+	}
+}
