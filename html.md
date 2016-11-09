@@ -53,11 +53,6 @@
 ## 1 前言
 
 
-HTML作为描述网页结构的超文本标记语言，在百度一直有着广泛的应用。本文档的目标是使HTML代码风格保持一致，容易被理解和被维护。
-
-
-
-
 ## 2 代码风格
 
 
@@ -360,7 +355,7 @@ alert(document.getElementById('foo').tagName);
 示例：
 
 ```html
-<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
 ```
 
 #### [建议] 在 `html` 标签上设置正确的 lang 属性。
@@ -543,12 +538,12 @@ viewport meta tag可以设置可视区域的宽度和初始缩放大小，避免
 
 解释：
 
-src 取值为空，会导致部分浏览器重新加载一次当前页面，参考：<https://developer.yahoo.com/performance/rules.html#emptysrc> 
+src 取值为空，会导致部分浏览器重新加载一次当前页面，参考：<https://developer.yahoo.com/performance/rules.html#emptysrc>
 
 
 #### [建议] 避免为 `img` 添加不必要的 `title` 属性。
 
-解释：  
+解释：
 
 多余的 title 影响看图体验，并且增加了页面尺寸。
 
@@ -823,7 +818,3 @@ button 元素的默认 type 为 submit，如果被置于 form 元素中，点击
 </tr>
 </table>
 ```
-
-
-
-

@@ -72,7 +72,7 @@
 
 　　[8.3 Expression](#83-expression)
 
-[9 less](#9-%E5%93%8D%E5%BA%94%E5%BC%8F)
+[9 less](#9)
 
 
 
@@ -1051,6 +1051,8 @@ h1 {
 
 
 #### [强制] 禁止使用 `Expression`。
+
+
 
 
 ## 9 LESS规范
