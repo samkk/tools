@@ -72,7 +72,7 @@
 
 　　[8.3 Expression](#83-expression)
 
-[9 less](#7-%E5%93%8D%E5%BA%94%E5%BC%8F)
+[9 less](#9-%E5%93%8D%E5%BA%94%E5%BC%8F)
 
 
 
@@ -1055,9 +1055,9 @@ h1 {
 
 ## 9 LESS规范
 
-### Less 代码的基本规范和原则与CSS编码规范保持一致。
+#### Less 代码的基本规范和原则与CSS编码规范保持一致。
 
-### 代码必须（MUST）按如下形式按顺序组织：
+#### 代码必须（MUST）按如下形式按顺序组织：
 
 - @import
 - 变量声明
@@ -1065,7 +1065,7 @@ h1 {
 
 示例：
 
-```html
+```css
 // ✓
 @import "est/all.less";
 
@@ -1075,4 +1075,162 @@ h1 {
     width: 960px;
     margin: 0 auto;
 }
+```
+
+
+#### @import 语句
+
+@import 语句引用的文件必须（MUST）写在一对引号内，.less 后缀不得（MUST NOT）省略（与引入 CSS 文件时的路径格式一致）。引号使用 ' 和 " 均可，但在同一项目内必须（MUST）统一。
+
+
+```css
+// ✗
+@import 'est/all';
+@import "my/mixins.less";
+
+// ✓
+@import "est/all.less";
+@import "my/mixins.less";
+```
+
+
+#### 空格
+
+属性、变量
+选择器和 { 之间必须（MUST）保留一个空格。
+属性名后的冒号（:）与属性值之间必须（MUST）保留一个空格，冒号前不得（MUST NOT）保留空格。
+定义变量时冒号（:）与变量值之间必须（MUST）保留一个空格，冒号前不得（MUST NOT）保留空格。
+在用逗号（,）分隔的列表（Less 函数参数列表、以 , 分隔的属性值等）中，逗号后必须（MUST）保留一个空格，逗号前不得（MUST NOT）保留空格。
+
+```css
+// ✗
+.box{
+    @w:50px;
+    @h :30px;
+    width:@w;
+    height :@h;
+    color: rgba(255,255,255,.3);
+    transition: width 1s,height 3s;
+}
+
+// ✓
+.box {
+    @w: 50px;
+    @h: 30px;
+    width: @w;
+    height: @h;
+    transition: width 1s, height 3s;
+}
+```
+
+#### 运算
+
++ / - / * / / 四个运算符两侧必须（MUST）保留一个空格。+ / - 两侧的操作数必须（MUST）有相同的单位，如果其中一个是变量，另一个数值必须（MUST）书写单位。
+
+
+```css
+// ✗
+@a: 200px;
+@b: (@a+100)*2;
+
+// ✓
+@a: 200px;
+@b: (@a + 100px) * 2;
+
+// ✗
+.box {
+    .size(30px,20px);
+    .clearfix ();
+}
+
+// ✓
+.box {
+    .size(30px, 20px);
+    .clearfix();
+}
+```
+
+#### 选择器
+
+当多个选择器共享一个声明块时，每个选择器声明必须（MUST）独占一行。
+
+```css
+// ✗
+h1, h2, h3 {
+    font-weight: 700;
+}
+
+// ✓
+h1,
+h2,
+h3 {
+    font-weight: 700;
+}
+```
+
+Class 命名不得以样式信息进行描述，如 `.float-right`、`text-red` 等。
+
+
+#### 嵌套和缩进
+
+必须（MUST）采用 4 个空格为一次缩进， 不得（MUST NOT）采用 TAB 作为缩进。
+嵌套的声明块前必须（MUST）增加一次缩进，有多个声明块共享命名空间时尽量（SHOULD）嵌套书写，避免选择器的重复。
+但是需注意的是，尽量（SHOULD）仅在必须区分上下文时才引入嵌套关系（在嵌套书写前先考虑如果不能嵌套，会如何书写选择器）
+
+```css
+// ✗
+.main .title {
+  font-weight: 700;
+}
+
+.main .content {
+  line-height: 1.5;
+}
+
+.main {
+.warning {
+  font-weight: 700;
+}
+
+  .comment-form {
+    #comment:invalid {
+      color: red;
+    }
+  }
+}
+
+// ✓
+.main {
+    .title {
+        font-weight: 700;
+    }
+
+    .content {
+        line-height: 1.5;
+    }
+
+    .warning {
+        font-weight: 700;
+    }
+}
+
+#comment:invalid {
+    color: red;
+}
+```
+
+
+#### 变量
+
+Less 的变量值总是以同一作用域下最后一个同名变量为准，务必注意后面的设定会覆盖所有之前的设定。
+变量命名必须（MUST）采用 @foo-bar 形式，不得（MUST NOT）使用 @fooBar 形式。
+
+```css
+// ✗
+@sidebarWidth: 200px;
+@width:800px;
+
+// ✓
+@sidebar-width: 200px;
+@width: 800px;
 ```
